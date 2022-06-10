@@ -7,11 +7,11 @@
         Users
     </a>
     <a class="dash-card border border-success col-lg-3 font-weight-bold text-success text-decoration-none"  href="{{route('news')}}">
-        <i class="bg-success fas fa-bell"></i>
+        <i class="bg-success fas fa-comment-alt"></i>
         News
     </a>
     <a class="dash-card border border-warning col-lg-3 font-weight-bold text-warning text-decoration-none" href="{{route('nots')}}">
-        <i class="bg-warning fas fa-comment-alt"></i>
+        <i class="bg-warning fas fa-bell"></i>
         Notifications
     </a>
 </div>

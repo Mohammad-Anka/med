@@ -36,7 +36,7 @@ class NotficationController extends Controller
     {
         $nots = Notification::with(['getUser'])->paginate(pagadmin);
 
-        return view('Admin.nots', compact('nots'));
+        return $nots;
         // return view(,compact('news'))
 
     }
