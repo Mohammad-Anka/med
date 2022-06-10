@@ -1,0 +1,139 @@
+:root {
+    --color-light: rgba(132, 139, 200, 0.18);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+    --transition : all .4s ease;
+    --card-border-radius : 1rem;
+}
+
+html , body {
+    height : 100%;
+}
+.dash-card {
+    height: 13rem;
+    display:flex;
+    flex-direction:column;
+    justify-content : center;
+    gap:1rem;
+    align-items : center;
+    box-shadow : var(--box-shadow);
+    transition : var(--transition);
+    border-radius : var(--card-border-radius);
+    cursor: pointer;
+    font-size : 1.3rem;
+}
+.dash-card:hover {
+    box-shadow : none;
+}
+.dash-card i {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color : #fff;
+    font-size : 1.8rem;
+}
+
+/* table style */
+
+.table {
+    border-collapse: collapse;
+}
+
+.table thead tr th {
+    font-size :14px;
+    font-weight : 600;
+    letter-spacing : 0.35px;
+    opacity : 1 ;
+    padding :12px;
+    vertical-align: middle ;
+    max-width:200px;
+    white-space: nowrap;
+}
+.table tbody tr td {
+    font-size :14px;
+    font-weight : normal;
+    letter-spacing : 0.35px;
+    padding :8px;
+    min-height:40px;
+    max-width : 200px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle ;
+}
+.table tbody tr td img {
+    width : 100px;
+    height:75px;
+}
+
+/* media query for small screen */
+@media(max-width:768px){
+    .table thead {
+        display: none;
+    }
+    .table , .table tbody , .table tr , .table td {
+        display: block;
+        width :100%;
+    }
+    .table tr {
+        margin-bottom:2rem;
+    }
+    .table tbody tr td {
+        text-align:right;
+        padding-left:50%;
+        position :relative;
+        max-width : none;
+    }
+    .table td::before{
+        content:attr(data-label);
+        position: absolute;
+        left :0;
+        width:50%;
+        padding-left:15px;
+        font-weight:600;
+        font-size :14px;
+        text-align:left;
+    }
+    .content {
+        float:right;
+    }
+    .table > :not(:first-child) {
+        border-top: none;
+    }
+    .table td:last-child{
+        border-bottom : 2px solid #111;
+    }
+}
+.back-btn {
+    font-size : 1.3rem;
+    font-weight : 600;
+}
+.table-responsive::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.table-responsive::-webkit-scrollbar-track {
+    background-color : #d8d8d8;
+    border-radius: 10px;
+    margin: .5rem;
+}
+.content {
+    height: 75px;
+    max-width: 300px;
+    overflow: scroll;
+    text-align: left;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    margin: .5rem;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #b9b9b9;
+    border-radius: 6px;
+}
